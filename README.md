@@ -32,6 +32,8 @@ The dataset includes information on:
 
 ---
 
+## 📦 Project Structure
+
 ├── app.py                  # Streamlit UI
 ├── model.pkl               # Trained Random Forest model
 ├── scaler.pkl              # Scaler used for input normalization
