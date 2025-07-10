@@ -32,3 +32,8 @@ The dataset includes information on:
 
 ---
 
+├── app.py                  # Streamlit UI
+├── model.pkl               # Trained Random Forest model
+├── scaler.pkl              # Scaler used for input normalization
+├── dataset_med.csv         # Dataset (optional for reference)
+└── README.md
