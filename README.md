@@ -1,41 +1,79 @@
 # 🩺 Lung Cancer Survival Prediction
 
-This project aims to predict the **survival outcome of lung cancer patients** based on various clinical and demographic factors using machine learning. It uses a **Random Forest Classifier** trained on structured medical data and provides an intuitive **Streamlit web application** for real-time predictions.
+This project predicts whether a patient diagnosed with lung cancer is likely to survive, based on clinical and demographic details. The model is trained using Random Forest and deployed as an interactive Streamlit app.
 
 ---
 
-## 📌 Project Objective
+## 📌 Objective
 
-To build a predictive model that forecasts whether a patient diagnosed with lung cancer is likely to survive, using features like age, smoking status, treatment type, BMI, and comorbidities.
-
----
-
-## 📊 Dataset Overview
-
-The dataset includes information on:
-
-- Demographics: Age, Gender, Country  
-- Diagnosis & Health History: Cancer Stage, Smoking Status, Hypertension, Cirrhosis, Asthma  
-- Lifestyle: BMI, Cholesterol, Family History, Other Cancers  
-- Treatment: Type of treatment taken  
-- Target: `survived` (Yes/No)
+To demonstrate a full ML pipeline: from data preprocessing and model training to web deployment — optimized for lightweight, GitHub-friendly models.
 
 ---
 
-## 🧠 ML Approach
+## 🚀 Technologies Used
 
-- **Preprocessing**: Label encoding, standardization, missing value handling  
-- **Imbalance Handling**: SMOTE (Synthetic Minority Oversampling Technique)  
-- **Model**: Random Forest Classifier  
-- **Evaluation**: Achieved ~85% accuracy on test data  
-- **Deployment**: Interactive Streamlit UI
+- Python 3
+- Scikit-learn (RandomForestClassifier)
+- Imbalanced-learn (SMOTE)
+- Streamlit (UI)
+- Joblib (model serialization)
 
 ---
 
-## 📦 Project Structure
+## 📊 Features Used for Prediction
 
-├── app.py                  # Streamlit UI
-├── model.pkl               # Trained Random Forest model
-├── scaler.pkl              # Scaler used for input normalization
-├── dataset_med.csv         # Dataset (optional for reference)
-└── README.md
+- Age  
+- Gender  
+- Country  
+- Cancer Stage  
+- Family History of Cancer  
+- Smoking Status  
+- BMI  
+- Cholesterol Level  
+- Hypertension  
+- Asthma  
+- Cirrhosis  
+- Other Cancer History  
+- Treatment Type
+
+🗑️ **Dropped**: `id`, `diagnosis_date`, `end_treatment_date`
+
+---
+
+## 🧠 ML Model Details
+
+| Property            | Value                           |
+|---------------------|----------------------------------|
+| Model               | RandomForestClassifier           |
+| n_estimators        | 25–40 (finalized for <25MB)      |
+| Data Used           | ~10–12% (stratified sample)      |
+| Balancing           | SMOTE                            |
+| Accuracy Achieved   | ~74%                             |
+| Compression         | Joblib `compress=3 or 4`         |
+| Model Size          | ✅ ~20–25 MB                     |
+| GitHub Friendly     | ✅ Yes (no LFS required)          |
+
+---
+
+## 🖥️ Streamlit App Features
+
+- Tabbed interface: **Predict** and **Prediction History**
+- Real-time survival prediction with confidence %
+- Option to download history as CSV
+- Mobile-responsive layout
+- Clean, professional sidebar with author info
+
+---
+
+## 📦 Files Included
+
+| File             | Purpose                              |
+|------------------|---------------------------------------|
+| `app.py`         | Streamlit frontend                    |
+| `model.pkl`      | Trained and compressed ML model       |
+| `scaler.pkl`     | Feature scaler                        |
+| `requirements.txt` | All Python dependencies             |
+| `README.md`      | Project overview and instructions     |
+
+---
+
