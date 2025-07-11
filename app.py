@@ -122,3 +122,6 @@ with tab2:
         if st.button("🧹 Clear History"):
             st.session_state.history = []
             st.success("History cleared!")
+
+# Optional: Banner image
+# st.image("lung_banner.jpg", use_container_width=True)
